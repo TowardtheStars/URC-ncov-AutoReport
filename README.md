@@ -24,7 +24,7 @@
    2. 点击 fork 按钮后，github 需要一点时间来完成 fork 操作。
    3. fork 之后，检查上图中左上角的用户名是否已变为自己的用户名（即当前的 repo 是否为自己 fork 出来的），如果是，则 fork 成功。
 
-2. 默认的`data.json`是东区正常在校。也可以根据自己的实际情况修改`data.json`的数据，参看下文。
+2. 默认的`data.json`是东区正常在校。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#data.json 数据获取方法)。
 
 3. 点击Actions选项卡，点击 `I understand my workflows, go ahead and enable them`.
 
@@ -33,22 +33,31 @@
    ![secrets](imgs/image-20200826215037042.png)
 
 5. 默认的打卡时间是每天的中午12:28，可能会有数分钟的浮动。如需选择其它时间，可以修改`.github/workflows/report.yml`中的`cron`。请注意这里使用的是**国际标准时间UTC**，北京时间的数值比它大8个小时。建议修改默认时间，避开打卡高峰期以提高成功率。
- 
+
    ![image-20200910202430337](imgs/cron.png)
 
    这里 cron 的第一个数字为分钟数，第二个数字为小时（24小时制，零时区）。
-
-6. 在Actions选项卡可以确认打卡情况。如果打卡失败（可能是临时网络问题等原因），脚本会自动重试，五次尝试后如果依然失败，将返回非零值提示构建失败。
-
-   1. 如果成功打卡，Actions 的日志会有如下显示：![success](imgs/success.png)
-   2. 如果未显示 `Login Successful!` 则说明账号密码错误，需要用户返回第5步修改统一身份认证的账户和密码。
-   3. 如果未显示 `Report SUCCESSFUL!` 则说明 `data.json` 中的数据有误，请自行根据 [data.json 数据获取方法](#data.json 数据获取方法) 一节修正 data.json 中的内容。
 
 7. 将修改好的代码push至master分支。如果不需要修改 `data.json` 和 `report.yml`，请在 `README.md` 里添加一个空格并push，否则不会触发之后的步骤。**请在自己的仓库中修改，不要pull request到本仓库！**
 
    1. 点击图中红圈内的铅笔图标![edit](README.assets/edit-1599742597991.png)
    2. 在下面的文本框中的空行添加一个空格![edit2](README.assets/edit2.png)
    3. 将页面滚动到最下方，点击绿色的 Commit changes 按钮进行提交
+
+7. 在Actions选项卡可以确认打卡情况。如果打卡失败（可能是临时网络问题等原因），脚本会自动重试，五次尝试后如果依然失败，将返回非零值提示构建失败。
+
+   1. 如果成功打卡，Actions 的日志会有显示一个绿色的对勾。此后每天在上面设定的时间，程序都会自动打卡：![success](imgs/success.png)
+
+   2. 如果显示的是一个红色的叉子，则说明打卡失败，您提供的数据可能出现了问题。这时，为排除故障，请点击有红叉那一行的粗体字，进入如下页面，并在左侧边栏单击 build：
+
+      ![error1](README.assets/error1.png)
+
+      之后，右边的页面会显示 log，请展开 `Run report script`，并与下图中的正常情况进行对照
+
+      ![error2](README.assets/error2.png)
+
+      1. 如果未显示 `Login Successful!` 则说明账号密码错误，需要用户返回第5步修改统一身份认证的账户和密码。修改好后，请重新执行第 6 步进行检验。
+      2. 如果显示了 `Login Successful!` 而未显示 `Report SUCCESSFUL!` 则说明 `data.json` 中的数据有误，请自行根据 [data.json 数据获取方法](#data.json 数据获取方法) 一节修正 data.json 中的内容。
 
 8. 在Github个人设置页面的Notifications下可以设置Github Actions的通知，建议打开Email通知，并勾选"Send notifications for failed workflows only"。
 
@@ -92,6 +101,8 @@ MIT License
 Copyright (c) 2020 BwZhang
 
 Copyright (c) 2020 Violin Wang
+
+Copyright (c) 2020 Tianyue Hao
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
