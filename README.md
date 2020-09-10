@@ -24,7 +24,7 @@
    2. 点击 fork 按钮后，github 需要一点时间来完成 fork 操作。
    3. fork 之后，检查上图中左上角的用户名是否已变为自己的用户名（即当前的 repo 是否为自己 fork 出来的），如果是，则 fork 成功。
 
-2. 默认的`data.json`是东区正常在校。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#data.json 数据获取方法)。
+2. 默认的`data.json`是东区正常在校。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#datajson-数据获取方法)。
 
 3. 点击Actions选项卡，点击 `I understand my workflows, go ahead and enable them`.
 
@@ -57,7 +57,7 @@
       ![error2](README.assets/error2.png)
 
       1. 如果未显示 `Login Successful!` 则说明账号密码错误，需要用户返回第5步修改统一身份认证的账户和密码。修改好后，请重新执行第 6 步进行检验。
-      2. 如果显示了 `Login Successful!` 而未显示 `Report SUCCESSFUL!` 则说明 `data.json` 中的数据有误，请自行根据 [data.json 数据获取方法](#data.json 数据获取方法) 一节修正 data.json 中的内容。
+      2. 如果显示了 `Login Successful!` 而未显示 `Report SUCCESSFUL!` 则说明 `data.json` 中的数据有误，请自行根据 [data.json 数据获取方法](#datajson-数据获取方法) 一节修正 data.json 中的内容。
 
 8. 在Github个人设置页面的Notifications下可以设置Github Actions的通知，建议打开Email通知，并勾选"Send notifications for failed workflows only"。
 
