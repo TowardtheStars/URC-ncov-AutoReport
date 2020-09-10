@@ -24,7 +24,9 @@
    2. 点击 fork 按钮后，github 需要一点时间来完成 fork 操作。
    3. fork 之后，检查上图中左上角的用户名是否已变为自己的用户名（即当前的 repo 是否为自己 fork 出来的），如果是，则 fork 成功。
 
-2. 默认的`data.json`是东区正常在校。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#datajson-数据获取方法)。
+2. 默认的`data.json`是东区正常在校，下图为 `data.json` 对应的表单。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#datajson-数据获取方法)。
+
+   ![data.json 默认数据](README.assets/data.png)
 
 3. 点击Actions选项卡，点击 `I understand my workflows, go ahead and enable them`.
 
@@ -38,7 +40,7 @@
 
    这里 cron 的第一个数字为分钟数，第二个数字为小时（24小时制，零时区）。
 
-7. 将修改好的代码push至master分支。如果不需要修改 `data.json` 和 `report.yml`，请在 `README.md` 里添加一个空格并push，否则不会触发之后的步骤。**请在自己的仓库中修改，不要pull request到本仓库！**
+6. 将修改好的代码push至master分支。如果不需要修改 `data.json` 和 `report.yml`，请在 `README.md` 里添加一个空格并push，否则不会触发之后的步骤。**请在自己的仓库中修改，不要pull request到本仓库！**
 
    1. 点击图中红圈内的铅笔图标![edit](README.assets/edit-1599742597991.png)
    2. 在下面的文本框中的空行添加一个空格![edit2](README.assets/edit2.png)
