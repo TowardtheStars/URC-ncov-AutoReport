@@ -22,7 +22,7 @@
 
    1. ![fork](README.assets/fork.png)
    2. 点击 fork 按钮后，github 需要一点时间来完成 fork 操作。
-   3. fork 之后，检查上图中左上角的用户名是否已变为自己的用户名（即当前的 repo 是否为自己 fork 出来的），如果是，则 fork 成功。
+   3. fork 之后，检查上图中左上角的用户名是否已变为自己的用户名（即当前的 repo 是否为自己 fork 出来的），如果是，则 fork 成功。 
 
 2. 默认的`data.json`是东区正常在校，下图为 `data.json` 对应的表单。也可以根据自己的实际情况修改`data.json`的数据，参看 [data.json 数据获取方法](#datajson-数据获取方法)。
 
